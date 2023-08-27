@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scanner/homepage_controller.dart';
+import 'package:scanner/second_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,15 +24,6 @@ class HomePage extends StatelessWidget {
               },
               child: const Text('Normal Bar Code'),
             ),
-            Obx(() {
-              return Column(
-                children: [
-                  extractValue(controller.barCodeScans.value, 'pin'),
-                  extractValue(controller.barCodeScans.value, 'name'),
-                  extractValue(controller.barCodeScans.value, 'DOB'),
-                ],
-              );
-            }),
           ],
         ),
       ),
@@ -39,11 +31,11 @@ class HomePage extends StatelessWidget {
   }
 }
 
-Widget extractValue(String data, String tag) {
-  RegExp exp = RegExp('<$tag>(.*?)</$tag>');
-  String? match = exp.firstMatch(data)?.group(1);
-  return Text(
-    '$tag: ${match ?? "Scan Your BarCode"}',
-    style: const TextStyle(fontSize: 16),
-  );
-}
+// Widget extractValue(String data, String tag) {
+//   RegExp exp = RegExp('<$tag>(.*?)</$tag>');
+//   String? match = exp.firstMatch(data)?.group(1);
+//   return Text(
+//     '$tag: ${match ?? "Scan Your BarCode"}',
+//     style: const TextStyle(fontSize: 16),
+//   );
+// }
