@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:scanner/homepage_controller.dart';
-import 'package:scanner/second_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
