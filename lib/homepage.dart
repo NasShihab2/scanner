@@ -13,17 +13,13 @@ class HomePage extends StatelessWidget {
         title: const Text('B C'),
       ),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () async {
-                controller.scanNormal();
-              },
-              child: const Text('Normal Bar Code'),
-            ),
-          ],
+        child: Center(
+          child: ElevatedButton(
+            onPressed: () async {
+              controller.scanNormal();
+            },
+            child: const Text('Normal Bar Code'),
+          ),
         ),
       ),
     );
